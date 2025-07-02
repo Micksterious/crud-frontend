@@ -2,10 +2,10 @@ import React from "react";
 import axios from "axios";
 import "./StudentCardStyles.css";
 
-const StudentCard = ({ task, fetchAllStudents }) => {
+const StudentCard = ({ student, fetchAllStudents }) => {
   const handleEnrolledStudents = async () => {
     try {
-      await axios.patch(`http://localhost:8080/api/tasks/${student.id}`, {
+      await axios.patch(`http://localhost:8080/api/${student.id}`, {
         completed: !student.enrolled,
       });
       fetchAllStudents();
@@ -42,4 +42,4 @@ const StudentCard = ({ task, fetchAllStudents }) => {
   
 };
 
-export default TaskCard;
+export default StudentCard;

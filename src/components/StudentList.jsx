@@ -2,7 +2,7 @@ import React from "react";
 import StudentCard from "./StudentCards";
 
 const StudentList = ({ students, fetchAllStudents, navBarSetting }) => {
-  const filteredStudents = students.filter((task) => {
+  const filteredStudents = students.filter((student) => {
     if (navBarSetting === "All Students") return true;
     if (navBarSetting === "Enrolled Students") return student.enrolled;
     if (navBarSetting === "Unenrolled Students") return !student.enrolled;
