@@ -8,6 +8,8 @@ import Campus from "./components/Campus";
 import StudentList from "./components/StudentList";
 import CampusList from "./components/CampusList";
 import Home from "./components/Home";
+import AllCampuses from "./components/AllCampuses";
+import SingleCampuses from "./components/SingleCampuses";
 
 
 const App = () => {
@@ -16,23 +18,20 @@ const App = () => {
   return (
     //component can only use one parent element, one div 
     <div>
+      {/* NavBar component */}
       <NavBar />
-      <nav>
-        <Link to="/student"> Student </Link>
-        <Link to="/campus"> Campuses </Link>
-      </nav>
+
 
       {/* create the path and connect component */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/all-students" element={<StudentList />} />
         <Route path="/student" element={<Student />} />
-        <Route path="/campus" element={<Campus />} />
+        <Route path="/campuses" element={<AllCampuses />} />
+        <Route path="/single-campuses" element={<SingleCampuses />} />
       </Routes>
     </div>
-    /* // <div>
-    //   <NavBar />
-    // </div> */
+
   );
 };
 
