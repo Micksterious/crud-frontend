@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-//import "./StudentCardStyles.css";
+import "./StudentCardStyles.css";
 
 const StudentCard = ({ student, fetchAllStudents }) => {
   const handleEnrolledStudents = async () => {
