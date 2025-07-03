@@ -11,7 +11,6 @@ import Home from "./components/Home";
 import AllCampuses from "./components/AllCampuses";
 import SingleCampuses from "./components/SingleCampuses";
 
-
 const App = () => {
 
   // new stuff play area ends
@@ -20,7 +19,6 @@ const App = () => {
     <div>
       {/* NavBar component */}
       <NavBar />
-
 
       {/* create the path and connect component */}
       <Routes>
@@ -32,7 +30,6 @@ const App = () => {
         <Route path="/add-campus" element={<Campus />} />
       </Routes>
     </div>
-
   );
 };
 
