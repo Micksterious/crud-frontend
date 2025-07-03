@@ -3,11 +3,12 @@ import { createRoot } from "react-dom/client";
 import "./AppStyles.css";
 import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Routes, Link, Route } from "react-router";
-import Campus from "./components/Campus";
 import Home from "./components/Home";
 import AllCampuses from "./components/AllCampuses";
 import SingleCampuses from "./components/SingleCampuses";
 import AllStudent from "./components/AllStudents";
+import AddStudents from "./components/AddStudents";
+import AddCampus from "./components/AddCampus";
 
 const App = () => {
 
@@ -24,8 +25,10 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/students" element={<AllStudent />} />
         <Route path="/campuses" element={<AllCampuses />} />
-        <Route path="/add-campus" element={<Campus />} />
+        <Route path="/add-campus" element={<AddCampus />} />
         <Route path="/campuses/:id" element={<SingleCampuses />} />
+        <Route path="/add-student" element={<AddStudents />} />
+        {/* Add more routes as needed */}
       </Routes>
     </div>
 
