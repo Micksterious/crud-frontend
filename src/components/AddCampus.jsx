@@ -36,12 +36,12 @@ const AddCampus = () => {
                     <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} required />
                 </div>
                 <div>
-                    <label>Description:</label>
-                    <textarea value={description} onChange={(e) => setDescription(e.target.value)} required />
-                </div>
-                <div>
                     <label>Image URL:</label>
                     <input type="text" value={imageUrl} onChange={(e) => setImageUrl(e.target.value)} />
+                </div>
+                <div>
+                    <label>Description:</label>
+                    <textarea value={description} onChange={(e) => setDescription(e.target.value)} required />
                 </div>
                 <button type="submit">Add Campus</button>
             </form>

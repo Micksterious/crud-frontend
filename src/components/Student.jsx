@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import './Campus.css'
 
 //this is the page with aform to add a new student
 const Student = () => {
@@ -63,18 +64,18 @@ const Student = () => {
         />
         <input
           type="text"
-          placeholder="Address"
-          value={newStudent.address}
+          placeholder="Major"
+          value={newStudent.major}
           onChange={(e) =>
-            setNewStudent({ ...newStudent, address: e.target.value })
+            setNewStudent({ ...newStudent, major: e.target.value })
           }
         />
         <input
           type="text"
-          placeholder="Description"
-          value={newStudent.description}
+          placeholder="Campus"
+          value={newStudent.campus}
           onChange={(e) =>
-            setNewStudent({ ...newStudent, description: e.target.value })
+            setNewStudent({ ...newStudent, campus: e.target.value })
           }
         />
         <button onClick={handleAddStudent}>Add Student</button>
@@ -86,9 +87,7 @@ const Student = () => {
             {student.imageUrl && <img src={student.imageUrl} alt={student.name} />}
             <div className="student-card-buttons">
               <button onClick={() => handleEditStudent(student.id)}>Edit</button>
-              <button onClick={() => handleDeleteStudent(student.id)}>
-                Delete
-              </button>
+              <button onClick={() => handleDeleteStudent(student.id)}>Delete</button>
             </div>
           </div>
         ))}
