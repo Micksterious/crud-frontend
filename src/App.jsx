@@ -74,7 +74,7 @@ const App = () => {
         <Route path="/all-students" element={<StudentList />} />
         {/* <Route path="/student" element={<Student />} /> */}
         {/* <Route path="/all-campus/:campusId" element={<Campus/>}/> */}
-        <Route path="/all-campus" element={<CampusList campus = {campus}/>}/>
+        <Route path="/all-campuses" element={<CampusList campus = {campus}/>}/>
         {/* <Route path="/add-campus/" element={<addCampus/>}/> */}
         {/* pass props, new variable in the CampusList conponent */}
       </Routes>
