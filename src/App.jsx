@@ -6,7 +6,36 @@ import { BrowserRouter as Router, Routes, Link, Route } from "react-router";
 import Student from "./components/Student";
 import Campus from "./components/Campus";
 import StudentList from "./components/StudentList";
-//import CampusList from "./components/CampusList";
+import CampusList from "./components/CampusList";
+
+//campus object, lowercase, {curly}
+const campus = [
+{
+  id:1,
+  name: "BMCC CUNY",
+  descrption: "description",
+  address: "address",
+  image:"https://hips.hearstapps.com/hmg-prod/images/berry-college-historic-campus-at-twilight-royalty-free-image-1652127954.jpg?crop=0.668xw:1.00xh;0.167xw,0&resize=1120:*",
+},
+{
+  id:2,
+  name: "BMCC CUNY",
+  descrption: "description",
+  address: "address",
+  image:"https://hips.hearstapps.com/hmg-prod/images/berry-college-historic-campus-at-twilight-royalty-free-image-1652127954.jpg?crop=0.668xw:1.00xh;0.167xw,0&resize=1120:*",
+},
+{
+  id:3,
+  name: "BMCC CUNY",
+  descrption: "description",
+  address: "address",
+  image:"https://hips.hearstapps.com/hmg-prod/images/berry-college-historic-campus-at-twilight-royalty-free-image-1652127954.jpg?crop=0.668xw:1.00xh;0.167xw,0&resize=1120:*",
+},
+]
+
+
+
+
 
 
 const App = () => {
@@ -30,22 +59,22 @@ const App = () => {
 
   // new stuff play area ends
   return (
-
+    //component can only use one parent element, one div 
     <div>
-      <nav>
+      <NavBar/> 
+      {/* <nav>
         <Link to="/student"> Student </Link>
         <Link to="/campuses"> Campuses </Link>
-      </nav>
+      </nav> */}
 
+      {/* create the path and connect component */}
       <Routes>
-        <Route path="/student" element={<Student />} />
-        <Route path="/Campuses" element={<Campus />} />
+        <Route path="/all-student" element={<StudentList />} />
+        {/* <Route path="/student" element={<Student />} /> */}
+        {/* <Route path="/campus" element={<Campus />} /> */}
+        <Route path="/all-campus" element={<CampusList campus = {campus}/>}/>
+        {/* pass props, new variable in the CampusList conponent */}
       </Routes>
-      <div className="app">
-        <h1>Hello React!</h1>
-        <img className="react-logo" src="/react-logo.svg" alt="React Logo" />
-
-      </div>
 
 {/*       
       // test area 2 begins

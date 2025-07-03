@@ -8,10 +8,11 @@ const NavBar = () => {
       This means that every time we click on a link, the page will reload.
       Let's fix that!
       */}
-      <NavLink to="/">All Tasks</NavLink>
-      <NavLink to="/complete">Completed Tasks</NavLink>
-      <NavLink to="/incomplete">Incomplete Tasks</NavLink>
-      <NavLink to="/add-task">Add Task</NavLink>
+      {/* choose alt \^ , take to path*/}
+      <NavLink to="/">Home</NavLink> 
+      <NavLink to="/all-campus">All Campus</NavLink>
+      <NavLink to="/all-student">All Student</NavLink>
+      <NavLink to="/settings">Settings</NavLink>
   </nav>;
 };
 
