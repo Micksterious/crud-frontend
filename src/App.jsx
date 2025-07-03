@@ -17,11 +17,6 @@ const App = () => {
     //component can only use one parent element, one div 
     <div>
       <NavBar />
-      <nav>
-        <Link to="/student"> Student </Link>
-        <Link to="/campus"> Campuses </Link>
-      </nav>
-
       {/* create the path and connect component */}
       <Routes>
         <Route path="/" element={<Home />} />
@@ -30,9 +25,6 @@ const App = () => {
         <Route path="/campus" element={<Campus />} />
       </Routes>
     </div>
-    /* // <div>
-    //   <NavBar />
-    // </div> */
   );
 };
 
