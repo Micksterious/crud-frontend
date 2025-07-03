@@ -7,6 +7,7 @@ import Student from "./components/Student";
 import Campus from "./components/Campus";
 import StudentList from "./components/StudentList";
 import CampusList from "./components/CampusList";
+import Home from "./components/Home";
 
 //campus object, lowercase, {curly}
 const campus = [
@@ -69,10 +70,12 @@ const App = () => {
 
       {/* create the path and connect component */}
       <Routes>
-        <Route path="/all-student" element={<StudentList />} />
+        <Route path="/" element={<Home/>}/>
+        <Route path="/all-students" element={<StudentList />} />
         {/* <Route path="/student" element={<Student />} /> */}
-        {/* <Route path="/campus" element={<Campus />} /> */}
+        {/* <Route path="/all-campus/:campusId" element={<Campus/>}/> */}
         <Route path="/all-campus" element={<CampusList campus = {campus}/>}/>
+        {/* <Route path="/add-campus/" element={<addCampus/>}/> */}
         {/* pass props, new variable in the CampusList conponent */}
       </Routes>
 
