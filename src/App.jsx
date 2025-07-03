@@ -11,6 +11,8 @@ import StudentList from "./components/StudentList";
 
 const App = () => {
   // new stuff play area begins
+  const [navBarSetting, setNavBarSetting] = useState("All Tasks");
+
   const [students, setStudents] = useState([]);
 
   async function fetchAllStudents() {
@@ -28,22 +30,25 @@ const App = () => {
 
   // new stuff play area ends
   return (
-    <div>
-      <nav>
-        <Link to="/student"> Student </Link>
-        <Link to="/campuses"> Campuses </Link>
-      </nav>
 
-      <Routes>
-        <Route path="/student" element={<Student />} />
-        <Route path="/Campuses" element={<Campus />} />
-      </Routes>
-      <div className="app">
-        <h1>Hello React!</h1>
-        <img className="react-logo" src="/react-logo.svg" alt="React Logo" />
+    // <div>
+    //   <nav>
+    //     <Link to="/student"> Student </Link>
+    //     <Link to="/campuses"> Campuses </Link>
+    //   </nav>
 
-      </div>
-<<<<<<< HEAD
+    //   <Routes>
+    //     <Route path="/student" element={<Student />} />
+    //     <Route path="/Campuses" element={<Campus />} />
+    //   </Routes>
+    //   <div className="app">
+    //     <h1>Hello React!</h1>
+    //     <img className="react-logo" src="/react-logo.svg" alt="React Logo" />
+
+    //   </div>
+
+      
+      // test area 2 begins
       <div>
         <NavBar
           navBarSetting={navBarSetting}
@@ -59,23 +64,22 @@ const App = () => {
           <div className="app">
             <StudentList
               students={students}
-              fetchAllStudents={Students}
+              fetchAllStudents={fetchAllStudents}
               navBarSetting={navBarSetting}
             />
           </div>
         )}
-            
-      <Routes>
-        <Route path="/Student" element={<Student />} />
-        <Route path="/Campus" element={<Campus />} />
-      </Routes>
-=======
->>>>>>> 17d068af6375746fc05dc49613b2b04873b9da53
+
+      {/* test area 2 ends */}
+        <Routes>
+          <Route path="/Student" element={<Student />} />
+          <Route path="/Campus" element={<Campus />} />
+        </Routes>
     </div>
-    // <div>
+    /* // <div>
     //   <NavBar />
     //
-    // </div>
+    // </div> */
   );
 };
 

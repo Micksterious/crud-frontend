@@ -1,5 +1,5 @@
 import React from "react";
-import StudentCard from "./StudentCard";
+import StudentCard from ".components/StudentCard";
 
 const StudentList = ({ students, fetchAllStudents, navBarSetting }) => {
   const filteredStudents = students.filter((student) => {
