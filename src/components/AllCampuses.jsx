@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Campus.css';
+import { Link } from 'react-router';
 
 const AllCampuses = () => {
     const [campuses, setCampuses] = useState([]);
@@ -31,11 +32,13 @@ const AllCampuses = () => {
         <div className="campus-list">
             {campuses.map((campus) => (
                 <div key={campus.id} className="campus-card">
-                <h2>{campus.name}</h2>
-                {campus.imageUrl && <img src={campus.imageUrl} alt={campus.name} />}
-                <div className="campus-card-buttons">
-                    <button onClick={() => handleDeleteCampus(campus.id)}>Delete</button>
-                </div>
+                    <Link to={`/campuses/${campus.id}`}>
+                        <h2>{campus.name}</h2>
+                        {campus.imageUrl && <img src={campus.imageUrl} alt={campus.name} />}
+                    </Link>
+                    <div className="campus-card-buttons">
+                        <button onClick={() => handleDeleteCampus(campus.id)}>Delete</button>
+                    </div>
             </div>
         ))}
     </div>

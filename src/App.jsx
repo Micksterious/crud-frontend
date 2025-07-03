@@ -28,7 +28,8 @@ const App = () => {
         <Route path="/all-students" element={<StudentList />} />
         <Route path="/student" element={<Student />} />
         <Route path="/campuses" element={<AllCampuses />} />
-        <Route path="/single-campuses" element={<SingleCampuses />} />
+        <Route path="/campuses/:id" element={<SingleCampuses />} />
+        <Route path="/add-campus" element={<Campus />} />
       </Routes>
     </div>
 
