@@ -4,7 +4,7 @@ import axios from "axios";
 //this is the page with aform to add a new student
 const Student = () => {
   const [students, setStudents] = useState([]);
-  const [newStudents, setNewStudent] = useState({
+  const [newStudent, setNewStudent] = useState({
     name: "",
     imageUrl: "",
     major: "",
@@ -26,7 +26,7 @@ const Student = () => {
 
   const handleAddStudent = async () => {
     try {
-      await axios.post("http://localhost:8080/api/students", NewStudent);
+      await axios.post("http://localhost:8080/api/students", newStudent);
       setNewStudent({ name: "", imageUrl: "", major: "", campus: "" });
       fetchAllStudents();
     } catch (error) {
