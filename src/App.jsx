@@ -30,14 +30,20 @@ const App = () => {
   return (
     <div>
       <nav>
-        <Link to="/Student"> Student </Link>
-        <Link to="/Campus"> Campus </Link>
+        <Link to="/student"> Student </Link>
+        <Link to="/campuses"> Campuses </Link>
       </nav>
+
+      <Routes>
+        <Route path="/student" element={<Student />} />
+        <Route path="/Campuses" element={<Campus />} />
+      </Routes>
       <div className="app">
         <h1>Hello React!</h1>
         <img className="react-logo" src="/react-logo.svg" alt="React Logo" />
 
       </div>
+<<<<<<< HEAD
       <div>
         <NavBar
           navBarSetting={navBarSetting}
@@ -63,6 +69,8 @@ const App = () => {
         <Route path="/Student" element={<Student />} />
         <Route path="/Campus" element={<Campus />} />
       </Routes>
+=======
+>>>>>>> 17d068af6375746fc05dc49613b2b04873b9da53
     </div>
     // <div>
     //   <NavBar />
