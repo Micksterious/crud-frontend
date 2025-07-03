@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Campus.css'; 
-
+//this is the page with the form to add a new campus
 const Campus = () => {
   const [campuses, setCampuses] = useState([]);
   const [newCampus, setNewCampus] = useState({ name: '', imageUrl: '', address: '', description: '' });
