@@ -11,8 +11,9 @@ const NavBar = () => {
       {/* choose alt \^ , take to path*/}
       <NavLink to="/">Home</NavLink> 
       <NavLink to="/campuses">All Campuses</NavLink>
-      <NavLink to="/all-students">All Students</NavLink>
+      <NavLink to="/students">All Students</NavLink>
       <NavLink to="/add-campus">Add Campus</NavLink>
+
 
       {/* <NavLink to="/settings">Settings</NavLink> */}
   </nav>;
