@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './Campus.css'; // Assuming you have a CSS file for styling
+import './Campus.css'; 
 
 const Campus = () => {
   const [campuses, setCampuses] = useState([]);
@@ -40,7 +40,7 @@ const Campus = () => {
 
   return (
     <div>
-      <h1 className="campus-title">All Campuses</h1>
+      <h1 className="campus-title">Add Campus</h1>
       <div className="add-campus-form">
         <input
           type="text"
