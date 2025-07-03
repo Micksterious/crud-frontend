@@ -10,18 +10,19 @@ const App = () => {
   return (
     <div>
       <nav>
-        <Link to="/Student"> Student </Link>
-        <Link to="/Campus"> Campus </Link>
+        <Link to="/student"> Student </Link>
+        <Link to="/campuses"> Campuses </Link>
       </nav>
+
+      <Routes>
+        <Route path="/student" element={<Student />} />
+        <Route path="/Campuses" element={<Campus />} />
+      </Routes>
       <div className="app">
         <h1>Hello React!</h1>
         <img className="react-logo" src="/react-logo.svg" alt="React Logo" />
 
       </div>
-      <Routes>
-        <Route path="/Student" element={<Student />} />
-        <Route path="/Campus" element={<Campus />} />
-      </Routes>
     </div>
     // <div>
     //   <NavBar />
