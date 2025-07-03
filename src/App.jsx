@@ -3,14 +3,12 @@ import { createRoot } from "react-dom/client";
 import "./AppStyles.css";
 import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Routes, Link, Route } from "react-router";
-import Student from "./components/Student";
 import Campus from "./components/Campus";
-import StudentList from "./components/StudentList";
-import CampusList from "./components/CampusList";
 import Home from "./components/Home";
 import AllCampuses from "./components/AllCampuses";
 import SingleCampuses from "./components/SingleCampuses";
-
+import AllStudent from "./components/AllStudents";
+import Student from "./components/Student";
 
 const App = () => {
 
@@ -25,11 +23,11 @@ const App = () => {
       {/* create the path and connect component */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/all-students" element={<StudentList />} />
-        <Route path="/student" element={<Student />} />
+        <Route path="/students" element={<AllStudent />} />
         <Route path="/campuses" element={<AllCampuses />} />
-        <Route path="/campuses/:id" element={<SingleCampuses />} />
         <Route path="/add-campus" element={<Campus />} />
+        <Route path="/add-student" element={<Student />} />
+        <Route path="/campuses/:id" element={<SingleCampuses />} />
       </Routes>
     </div>
 
