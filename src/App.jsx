@@ -7,12 +7,8 @@ import Home from "./components/Home";
 import AllCampuses from "./components/AllCampuses";
 import SingleCampuses from "./components/SingleCampuses";
 import AllStudent from "./components/AllStudents";
-<<<<<<< HEAD
-import Student from "./components/Student";
-=======
 import AddStudents from "./components/AddStudents";
 import AddCampus from "./components/AddCampus";
->>>>>>> 68efca7b8bb4014530e6237cf40d0b99b35b5aa1
 
 const App = () => {
 
@@ -29,12 +25,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/students" element={<AllStudent />} />
         <Route path="/campuses" element={<AllCampuses />} />
-<<<<<<< HEAD
-        <Route path="/add-campus" element={<Campus />} />
-        <Route path="/add-student" element={<Student />} />
-=======
         <Route path="/add-campus" element={<AddCampus />} />
->>>>>>> 68efca7b8bb4014530e6237cf40d0b99b35b5aa1
         <Route path="/campuses/:id" element={<SingleCampuses />} />
         <Route path="/add-student" element={<AddStudents />} />
         {/* Add more routes as needed */}

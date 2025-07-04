@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import './Campus.css'
+import './Student.css';
 
 //this is the page with aform to add a new student
 const Student = () => {
