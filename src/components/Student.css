@@ -1,0 +1,38 @@
+.student-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  border: 1px solid #ddd;
+  margin: 20px;
+}
+
+.student-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  width: 200px;
+  text-align: center;
+}
+
+.student-card img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+.student-title{
+  text-align: center;
+  margin-top: 20px;
+}
+.add-student-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px;
+  justify-content: center;
+
+}
+.student-card-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border: 1;
+}

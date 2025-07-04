@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"; 
 import axios from "axios"; //better version of fetch, to grabe data from db
-import './Campus.css';
+import './Student.css';
 import { Link } from "react-router";
 
 //className makes div unique to call, later css can use .student-list
