@@ -4,7 +4,7 @@ import './Campus.css';
 import { Link } from "react-router";
 
 //className makes div unique to call, later css can use .student-list
-const AllStudent =() =>{
+const AllStudents =() =>{
     const [students, setStudents] = useState([]);
 
     useEffect(() => {
@@ -33,12 +33,14 @@ const AllStudent =() =>{
     <div className="student-list">
       {students.map((student) => (
         <div key={student.id} className="student-card">
+          <Link to={`/students/${student.id}`}>
           <h2>{student.firstName} {student.lastName}</h2>
+            <h2>{student.name}</h2>
+            {student.imageUrl && <img src={student.imageUrl} alt={`${student.firstName} ${student.lastName}`}/>}
+          </Link>
           <p>{student.email}</p>
           <div className="student-card-buttons">
             <button onClick={() => handleDeleteStudents(student.id)}>Delete</button>
-            {/* You can link to a single student page here */}
-            {/* <Link to={`/students/${student.id}`}>View</Link> */}
           </div>
         </div>
       ))}
@@ -47,5 +49,5 @@ const AllStudent =() =>{
     );
 };
 
-export default AllStudent;
+export default AllStudents;
     
