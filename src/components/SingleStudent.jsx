@@ -1,7 +1,7 @@
 import React, {useState, useEffect, use} from "react";
 import axios from "axios";
 import{useParams} from "react-router";
-//import "./Student.css";
+import "./Student.css";
 
 const SingleStudent = () => {
     const {id} = useParams();
