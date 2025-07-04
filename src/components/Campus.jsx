@@ -74,7 +74,7 @@ const Campus = () => {
             <h2>{campus.name}</h2>
             {campus.imageUrl && <img src={campus.imageUrl} alt={campus.name} />}
             <div className="campus-card-buttons">
-                <button onClick={() => handleEditCampus(campus.id)}>Edit</button>
+                <button onClick={() => handleAddCampus(campus.id)}>Edit</button>
                 <button onClick={() => handleDeleteCampus(campus.id)}>Delete</button>
             </div>
           </div>
