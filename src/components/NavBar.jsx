@@ -13,6 +13,7 @@ const NavBar = () => {
       <NavLink to="/campuses">All Campuses</NavLink>
       <NavLink to="/students">All Students</NavLink>
       <NavLink to="/add-campus">Add Campus</NavLink>
+      <NavLink to="/add-student">Add Student</NavLink>
 
 
       {/* <NavLink to="/settings">Settings</NavLink> */}
