@@ -11,11 +11,6 @@ module.exports = {
     publicPath: "/",
   },
   devtool: "source-map",
-  plugins: [
-    new web.DefinePlugin({
-      "process.env.API_URL": JSON.stringify(process.env.API_URL),
-    }),
-  ],
   module: {
     rules: [
       {
