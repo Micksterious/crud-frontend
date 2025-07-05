@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Campus.css';
-import { useParams } from 'react-router'; 
+import { useParams } from 'react-router';
+import { Link } from 'react-router'; // use Link from react-router-dom for navigation
 
 const SingleCampus = () => {
   const { id } = useParams(); // get campus ID from URL
@@ -32,7 +33,20 @@ const SingleCampus = () => {
         <p><strong>Address:</strong> {campus.address}</p>
         <p><strong>Description:</strong> {campus.description}</p>
         <h3>Students Enrolled:</h3>
-        <p>This campus may have students enrolled, but they are not shown here.</p> {/* ✅ Static message */}
+        {campus.students && campus.students.length > 0 ? (
+          <ul>
+            {campus.students.map(student => (
+              <li key={student.id}>
+                <Link to={`/students/${student.id}`}>
+                  {student.firstName} {student.lastName}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>No students enrolled in this campus.</p>
+        )}
+
       </div>
     </div>
   );

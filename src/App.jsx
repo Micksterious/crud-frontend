@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Routes, Link, Route } from "react-router";
 import Home from "./components/Home";
 import AllCampuses from "./components/AllCampuses";
+import SingleStudent from "./components/SingleStudent";
 import SingleCampuses from "./components/SingleCampuses";
 import AllStudent from "./components/AllStudents";
 import AddStudents from "./components/AddStudents";
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/add-campus" element={<AddCampus />} />
         <Route path="/campuses/:id" element={<SingleCampuses />} />
         <Route path="/add-student" element={<AddStudents />} />
+        <Route path="/students/:id" element={<SingleStudent />} />
         {/* Add more routes as needed */}
       </Routes>
     </div>
