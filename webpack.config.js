@@ -1,4 +1,6 @@
+const plugin = require("eslint-plugin-react");
 const path = require("path");
+const { web } = require("webpack");
 
 module.exports = {
   mode: "development",
