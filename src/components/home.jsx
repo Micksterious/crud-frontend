@@ -4,8 +4,8 @@ import "./Home.css";
 import NavBar from "./NavBar";
 import { NavLink } from "react-router";
 
-const Home =() =>{
-    return(
+const Home = () => {
+    return (
         <div>
             <h1>Welcome to Campus Student Connect</h1>
             <p>
