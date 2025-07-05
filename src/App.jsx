@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./AppStyles.css";
 import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Routes, Link, Route } from "react-router";
-import Home from "./components/Homes";
+import Home from "./components/TEMPHome";
 import AllCampuses from "./components/AllCampuses";
 import AllStudent from "./components/AllStudents";
 import AddStudents from "./components/AddStudents";
