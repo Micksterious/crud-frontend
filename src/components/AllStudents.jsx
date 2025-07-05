@@ -50,4 +50,3 @@ const AllStudents = () => {
 };
 
 export default AllStudents;
-

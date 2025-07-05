@@ -5,11 +5,11 @@ import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Routes, Link, Route } from "react-router";
 import Home from "./components/Home";
 import AllCampuses from "./components/AllCampuses";
-import SingleStudent from "./components/SingleStudent";
-import SingleCampuses from "./components/SingleCampuses";
 import AllStudent from "./components/AllStudents";
 import AddStudents from "./components/AddStudents";
 import AddCampus from "./components/AddCampus";
+import SingleCampuses from "./components/SingleCampuses";
+import SingleStudent from "./components/SingleStudent";
 
 const App = () => {
 
@@ -20,15 +20,14 @@ const App = () => {
       {/* NavBar component */}
       <NavBar />
 
-
       {/* create the path and connect component */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/students" element={<AllStudent />} />
         <Route path="/campuses" element={<AllCampuses />} />
         <Route path="/add-campus" element={<AddCampus />} />
-        <Route path="/campuses/:id" element={<SingleCampuses />} />
         <Route path="/add-student" element={<AddStudents />} />
+        <Route path="/campuses/:id" element={<SingleCampuses />} />
         <Route path="/students/:id" element={<SingleStudent />} />
         {/* Add more routes as needed */}
       </Routes>
